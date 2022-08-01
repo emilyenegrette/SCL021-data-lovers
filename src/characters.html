@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Data Lovers</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="container1">
+    <header>
+    
+      <nav>
+        <ul>
+          <li><a href="index.html">Characters</a></li>
+         <li><a href="index.html">Books</a></li> 
+          <li><a href="index.html">Movies</a></li>
+        </ul>
+      </nav>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/img/logo-hp.png" alt="logo" />
+        </a>
+    </div>
+    <div class="nav2">
+             
+        <ul>
+         <!-- <li><a href="#fan">Fan Club</a></li> -->
+         <li><input type="button" id="login" class="login" value="Login" /></li>
+        </ul>
+      
+    </div>  
+    </header>
+  </div>
+  <!-- HEADER END -->
+  
+ <!-- BANNER -->
+ <div class="container7">
+    <div class="info">
+      <h1 id="title">Characters!</h1> 
+      <h3 id="title2">Learn about the most <b>intriguing</b> characters in the saga.</h3>
+    </div>
+  </div>
+   <!-- BANNER END -->
+   
+<!-- FILTER END -->
+  <main>
+    <div class="options">
+    <section id="input-box">
+      <select name="" id="orderAZ">
+        <option value="select">Select an option</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </select>
+
+      <select id="species-select" class="species2">
+        <option>Select Species</option>
+        <option value="Magical">Magical</option>
+        <option value="Human">Human</option>
+      </select>
+
+      <select id="houses-select" class="">
+        <option value="Gry">select House</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+      </select>
+
+     </section>
+   </div>
+  </main>
+   
+   <!--FILTER END -->
+  
+    <div id="characters-container">
+
+    </div>
+   
+    <div id="species-container">
+
+    </div>
+   <!-- FOOTER -->
+    <footer>
+          <p id="p1">Visit our social networks and learn about our daily promotions.</p> <br />
+          <p id="p2">Become a potterhead!</p> <br/>
+      
+          <ul class="rrss">
+            <li>
+              <a href="#" class="icon"><span class="iconify" data-icon="bi:facebook"></span>@wizardly</a>
+            </li>
+            <li>
+              <a href="#" class="icon"><span class="iconify" data-icon="ant-design:twitter-circle-filled"></span>@wizardly</a>
+            </li>
+            <li>
+              <a href="#" class="icon"><span class="iconify" data-icon="ant-design:instagram-filled"></span>@wizardly</a>
+            </li>
+        </ul>
+    
+          <p id="copy">© 2022, all rights reserved. Emily Negrette and Luisa Carrillo </p>    
+    </footer>
+
+   <!-- FOOTER END -->
+
+   <!-- SCRIPT -->
+  <script type="module" src="main.js"></script>
+  <script src="data.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"> </script>
+   <!-- SCRIPT ENDS -->
+  
+</body>
+</html>
