@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+// estas funciones son de ejemplo hola
 
 export const example = () => {
   return 'example';
