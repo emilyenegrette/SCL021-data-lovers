@@ -1,64 +1,59 @@
-# Harry Potter
+<h1 align="center"> Data Lovers - Harry Potter! </h1> 
 
-Harry Potter es una serie de novelas fantásticas escrita por la autora
-británica J. K. Rowling, en la que se describen las aventuras del joven
-aprendiz de magia y hechicería Harry Potter y sus amigos durante los años
-que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se
-centra en la lucha entre Harry Potter y el malvado mago lord Voldemort,
-quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.
+Página web sobre Harry Potter :heart:***Wizardly***:heart:, donde sus usuarios podrán encontrar, obtener e indagar información sobre una de las marcas más exitosas del mundo de los magos.
 
-El éxito de las novelas ha hecho de la marca una de las más exitosas del mundo.
-En 1999, la productora de cine Warner Bros. Adquirió los derechos para
-adaptar los siete libros a una serie de películas. La última de ellas,
-Harry Potter y las reliquias de la Muerte: parte 2, se estrenó el 15 de julio
-de 2011 y con ocho películas realizadas la serie se convirtió en una de las
-franquicias más exitosas del cine en concepto de recaudaciones en taquilla.​
+## Investigación UX :nerd_face:: 
 
-## Hallazgos
+#### 1. Usuarixs y objetivos :family:
 
-Haciendo una investigación sobre la información que podrían necesitar
-nuestras usuarias encontramos que los datos de mayor interés son:
+Yo como ***usuario principiante***, quisiera que la información que se mostrara sea sobre los personajes, para poder conocer a cada uno de ellos (seres mágicos y humanos).
 
-- Información sobre los personajes como nombre, especie, género, fecha de
-  nacimiento, saber si es _muggle_ o conocer su casa de estudio.
-- El colegio Hogwarts de Magia y Hechicería utiliza el sistema de Casas.
-  El cuerpo estudiantil de Hogwarts se divide en cuatro Casas ( Gryffindor,
-  Hufflepuff, Ravenclaw y Slytherin;). A nuestras usarías les interesa saber
-  cuantos estudiantes hay por cada casa.
-- Dentro del mundo mágico hay muchos hechizos que se pueden invocar, para
-  nuestras usuarias es importante conocerlos y saber lo que hacen
-  para estar preparadas.
-- Toda esta información se basa la saga de novelas de la autora J. K. Rowling,
-  para nuestras usuarias es relevante conocer cuantos libros han sido publicados
-  y les gustaría poder visualizar que personajes aparecen en cada libro.
-- Las pociones son una herramienta crucial en el mundo de Harry Potter,
-  tener un diccionario para poder consultarlas es una petición de las usuarias.
+Yo como ***usuario principiante***, quisiera conocer cuántas casas hay en Hogwarts, para saber cuántos estudiantes hay por cada casa.
 
-## Detalles de la data
 
-### Personajes
+***Criterio de aceptación:*** Quisiéramos que al filtrar la información lograramos ordenar alfabéticamente los personajes y filtrar las casas. 
 
-En la lista personajes puedes todos los que aparecen en la saga.
-Puedes encontrar información básica como nombre, especie, género,
-fecha de nacimiento, casa de estudio, saber si es un ser mágico o muggle,
-grupos a los que pertenece, libros en los que aparece entre otras cosas.
+### 2. Cómo fue tu proceso de diseño :art:
 
-### Hechizos
+***Prototipo de baja fidelidad***
 
-En esta lista podrás encontrar el nombre y la descripción de los hechizos
- que pueden invocar los personajes, también el lugar del libro donde se
-menciona este hechizo y su pronunciación .
+Leímos el readme proporcionado y definimos la página web que íbamos a diseñar. Realizamos bocetos basados en las opiniones de los usuarios, recopilando la información mas útil para el mismo. Para finalizar, efectuamos votaciones de acuerdo a las directrices que nos proporcionaron y así obtener un análisis de partida. 
 
-### Libros
+![bvcghhb](assets/readme/prototipo1-sc.jpg)
+![bvcghhb](assets/readme/prototipo2-sc.jpg)
 
-La lista de libros describe el título, fecha de lanzamiento y la descripción
-de cada libro dentro de la saga .
 
-### Datos curiosos
+***Prototipo de alta fidelidad***
 
-Lista de algunos datos curiosos sobre la saga, contiene tipo y contenido.
+Con el análisis obtenido pudimos iniciar nuestro diseño y de acuerdo a las votaciones se eligió el primer prototipo. 
 
-#### Pociones
+![bvcghhb](assets/readme/Wizardly_Project.png)
+ ![bvcghhb](assets/readme/wizardly-prototipo2.png)
 
-En esta lista puedes encontrar nombres de las pociones que se mencionan en el
-libro así como una pequeña descripción de la misma.
+ :sparkles: ***Prototipo final*** :sparkles:
+
+ Para el último prototipado fue necesario ir iterando diseños hasta que pudimos cumplir con los diferentes requerimientos de ambos usuarios. 
+
+ ![prototipo final](falta colocar imagenes)
+ ![prototipo final](falta colocar imagenes)
+ 
+#### 3. Solución problemas/necesidades :thinking:
+Esta página web está diseñada para que los usuarios principiantes logren obtener información acerca de la fantástica historia de Harry Potter, basadas en la famosa saga de libros de la autora británica J.K Rowling. 
+
+***Entre los principales problemas de los usuarios encontramos:***
+
+1- No lograr conocer todos los personajes que participaron en esta novela y producción cinematográfica.
+
+2-No saber cuántas casas existen en Hogwarts y los estudiantes que habitan en ella.
+
+***Entre las principales necesidades de los usuarios encontramos:***
+
+1- Conocer todos los personajes que participaroNn en las diferentes películas y libros de dicha autora.
+
+2-Conocer las casas existentes en Hogwarts y los estudiantes que pertenecen a cada una de ellas.
+
+
+
+ 
+
+---------- SCL021 Data Lovers - Devs 2022, Luisa Carrillo & Emily Negrette ----------
