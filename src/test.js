@@ -1,2 +1,2 @@
-import data from './data/pokemon/pokemon.js';
-console.log(data)
+import {harrySpecies, filterHouses, sortAtoZ} from './data.js'
+

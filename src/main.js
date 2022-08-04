@@ -1,7 +1,5 @@
 import data from './data/harrypotter/data.js';
-import {harrySpecies} from './data.js'
-import {filterHouses} from './data.js'
-import {sortAtoZ} from '/data.js'
+import {harrySpecies, filterHouses, sortAtoZ} from './data.js'
 
 function login(){
   alert(`Welcome to Wizardly!
