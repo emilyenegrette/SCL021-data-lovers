@@ -2,7 +2,7 @@ import {harrySpecies, filterHouses, sortAtoZ} from './data.js'
 
 const allCharacters =[
 {
-
+jbjebjfjdb hola
 }
 
 describe('sortAtoZ return elementos ordenados alfabéticamente de la A a la Z', () => {
