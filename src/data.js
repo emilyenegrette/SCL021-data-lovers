@@ -1,4 +1,3 @@
-// estas funciones son de ejemplo
 import data from './data/harrypotter/data.js';
 
 const dataHarryPotter = data.characters;

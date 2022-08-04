@@ -44,5 +44,3 @@ document.getElementById("houses-select").addEventListener("change", filterHouses
 
  //funcion de filtrado alfabeticamente
 document.getElementById("orderAZ").addEventListener("change", sortAtoZ,false)
-
-
