@@ -157,7 +157,7 @@ const dataHarryPotter = [
     ]
         //test de sort
     describe('sortAtoZ debería ser una función de ordenado de la A a la Z', () => {
-    it('debería ser una función', () => {
+    it('Debería ser una función', () => {
       expect(typeof sortAtoZ).toBe('function');
     });
   
@@ -184,15 +184,15 @@ const dataHarryPotter = [
   
   //test de species
   describe(harrySpecies, () => {
-    it("is a function", () => {
+    it("Debería ser una función", () => {
       expect(typeof harrySpecies).toBe("function");
     });
   
-    it("return species: human", () => {
+    it("Debería retornar especie humana", () => {
       let resultado = harrySpecies(dataHarryPotter, "Aberforth Dumbledore");
       expect(resultado[0].species).toBe("Human");
     });
-    it("return species: magical", () => {
+    it("Debería retornar especie mágica", () => {
         let resultado = harrySpecies(dataHarryPotter, "Albino peacock");
         expect(resultado[1].species).toBe("Peacock");
       });
@@ -201,23 +201,23 @@ const dataHarryPotter = [
 
   //test de houses
   describe(filterHouses, () => {
-    it("is a function", () => {
+    it("Debería ser una función", () => {
       expect(typeof filterHouses).toBe("function");
     });
   
-    it("return only Gryffindor", () => {
+    it("Debería retornar sólo Gryffindor", () => {
       let resultado = filterHouses(dataHarryPotter, "Albus Dumbledore");
       expect(resultado[0].house).toBe("Gryffindor");
     });
-    it("Return only Slytherin", () => {
+    it("Debería retornar sólo Slytherin", () => {
         let resultado = filterHouses(dataHarryPotter, "Abraxas Malfoy");
         expect(resultado[0].house).toBe("Slytherin");
       });
-      it("Return only Hufflepuff", () => {
+      it("Debería retornar sólo Hufflepuff", () => {
         let resultado = filterHouses(dataHarryPotter, "Cadwallader");
         expect(resultado[0].house).toBe("Hufflepuff");
       });
-      it("Return only Ravenclaw", () => {
+      it("Debería retornar sólo Ravenclaw", () => {
         let resultado = filterHouses(dataHarryPotter, "Anthony Goldstein");
         expect(resultado[0].house).toBe("Ravenclaw");
       });
