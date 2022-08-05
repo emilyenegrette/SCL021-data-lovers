@@ -21,8 +21,8 @@ export function harrySpecies(){
 }
 
 export function filterHouses(){
-  var results = dataHarryPotter.filter(e => e.house === this.value)
-  document.getElementById('characters-container').innerHTML = results.map(e=>  `
+  var results2 = dataHarryPotter.filter(e => e.house === this.value)
+  document.getElementById('characters-container').innerHTML = results2.map(e=>  `
   <div class="card">
     <div class="img-houses ${e.house}"></div>
     <ul>
@@ -57,8 +57,8 @@ export function sortAtoZ(){
       `).join(' ')
       
   } else if (typeSelected === 'z-a') {
-      var result = dataHarryPotter.sort((a, b) => (a.name > b.name ? -1 : 1));
-      document.getElementById("characters-container").innerHTML = result.map(e =>  `
+      var result3 = dataHarryPotter.sort((a, b) => (a.name > b.name ? -1 : 1));
+      document.getElementById("characters-container").innerHTML = result3.map(e =>  `
       <div class="card">
         <div class="img-houses ${e.house}"></div>
         <ul>
