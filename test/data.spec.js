@@ -1,30 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
-
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-}); 
-
-
-/*import {harrySpecies, filterHouses, sortAtoZ} from './data.js'
- 
+export {harrySpecies, filterHouses, sortAtoZ} from '../data.js'
 //test estructura
 const dataHarryPotter = [
         {
@@ -182,12 +156,12 @@ const dataHarryPotter = [
      
     ]
         //test de sort
-    describe('sortAtoZ function de ordenado de la A-Z typeSelected === "a-z"', () => {
-    it('is a function', () => {
+    describe('sortAtoZ debería ser una función de ordenado de la A a la Z', () => {
+    it('debería ser una función', () => {
       expect(typeof sortAtoZ).toBe('function');
     });
   
-    it('Rerurn characters en orden alfabético ', () => {
+    it('Debería ordenar los personajes en orden alfabético ', () => {
       let resultado = scrollTo (dataHarryPotter, sortAtoZ)
       expect(resultado[0].name).toBe("Aberforth Dumbledore");
       expect(resultado[1].name).toBe("Abraxas Malfoy");
@@ -198,12 +172,7 @@ const dataHarryPotter = [
   });
   }); 
 
-  describe('sortAtoZ function de ordenado de la Z-A typeSelected === "z-a"', () => {
-    it("is a function", () => {
-      expect(typeof sortAtoZ).toBe("function");
-    });
-  
-    it("Return characters en orden inverso", () => {
+    it("Debería ordenar los personajes en orden alfabético inverso", () => {
       let resultado = sortAtoZ(dataHarryPotter, sortAtoZ);
       expect(resultado[0].name).toBe("Zoo director");
       expect(resultado[1].name).toBe("Zacharias Smith's father");
@@ -212,7 +181,6 @@ const dataHarryPotter = [
       expect(resultado[4].name).toBe("Yvonne");
       expect(resultado[5].name).toBe("Xenophilius Lovegood");
     });
-  });
   
   //test de species
   describe(harrySpecies, () => {
@@ -253,4 +221,4 @@ const dataHarryPotter = [
         let resultado = filterHouses(dataHarryPotter, "Anthony Goldstein");
         expect(resultado[0].house).toBe("Ravenclaw");
       });
-  }); */
+  });
