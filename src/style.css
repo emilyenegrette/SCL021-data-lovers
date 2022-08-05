@@ -1,13 +1,14 @@
 *{
   margin: 0%;
   padding: 0;
-  
+  cursor: pointer;
 }
+
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Quicksand', sans-serif;
-  background: black
+  background: black;
 }
 
 h1, h2{
@@ -651,3 +652,8 @@ opacity: .30;
 color: #EEB421;
 }
 
+@media (max-width:600px){
+  body{
+    color: red;
+  }
+}
