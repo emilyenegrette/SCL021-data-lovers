@@ -1,74 +1,39 @@
-import data from './data/harrypotter/data.js';
-
-const dataHarryPotter = data.characters;
-
-export function harrySpecies(){
-  var results = dataHarryPotter.filter(e => e.species === "Human" ? e.species === this.value : e.species !== "Human")
-  document.getElementById('characters-container').innerHTML = results.map(e =>  `
-  <div class="card">
-    <div class="img-houses ${e.house}"></div>
-    <ul>
-      <li>Name: ${e.name}</li>
-      <li>Gender: ${e.gender}</li>
-      <li>House: ${e.house}</li>
-      <li>Books Featured: ${e.books_featured_in}</li>
-      <li>Species: ${e.species}</li>
-    </ul>
-  </div>
-  `).join(' ')
-
+export function filterHuman(array){
+  const resultsHuman = array.filter(e => e.species === 'Human')
+  return resultsHuman
 }
 
-export function filterHouses(){
-  var results2 = dataHarryPotter.filter(e => e.house === this.value)
-  document.getElementById('characters-container').innerHTML = results2.map(e=>  `
-  <div class="card">
-    <div class="img-houses ${e.house}"></div>
-    <ul>
-      <li>Name: ${e.name}</li>
-      <li>Gender: ${e.gender}</li>
-      <li>House: ${e.house}</li>
-      <li>Books Featured: ${e.books_featured_in}</li>
-      <li>Species: ${e.species}</li>
-    </ul>
-  </div>
-  `).join(' ')
-  
+export function filterMagical(array){
+  const resultsMagical = array.filter(e => e.species !== 'Human') 
+  return resultsMagical
 }
- 
-export function sortAtoZ(){
-  const orderName = document.getElementById('orderAZ');
-  const typeSelected = orderName.value;
 
-  if(typeSelected === "a-z"){
-      var result = dataHarryPotter.sort((a, b) => (a.name > b.name ? 1 : -1));
-      document.getElementById("characters-container").innerHTML = result.map(e =>  `
-      <div class="card">
-        <div class="img-houses ${e.house}"></div>
-        <ul>
-          <li>Name: ${e.name}</li>
-          <li>Gender: ${e.gender}</li>
-          <li>House: ${e.house}</li>
-          <li>Books Featured: ${e.books_featured_in}</li>
-          <li>Species: ${e.species}</li>
-        </ul>
-      </div>
-      `).join(' ')
-      
-  } else if (typeSelected === 'z-a') {
-      var result3 = dataHarryPotter.sort((a, b) => (a.name > b.name ? -1 : 1));
-      document.getElementById("characters-container").innerHTML = result3.map(e =>  `
-      <div class="card">
-        <div class="img-houses ${e.house}"></div>
-        <ul>
-          <li>Name: ${e.name}</li>
-          <li>Gender: ${e.gender}</li>
-          <li>House: ${e.house}</li>
-          <li>Books Featured: ${e.books_featured_in}</li>
-          <li>Species: ${e.species}</li>
-        </ul>
-      </div>
-      `).join(' ')
-      
-  }
+export function filterGryffindor(array){
+  const resultsGryffindor = array.filter(e => e.house === 'Gryffindor')
+  return resultsGryffindor
+}
+
+export function filterSlytherin(array){
+  const resultsSlytherin = array.filter(e => e.house === 'Slytherin')
+  return resultsSlytherin
+}
+
+export function filterHufflepuff(array){
+  const resultsHufflepuff = array.filter(e => e.house === 'Hufflepuff')
+  return resultsHufflepuff
+}
+
+export function filterRavenclaw(array){
+  const resultsRavenclaw = array.filter(e => e.house === 'Ravenclaw')
+  return resultsRavenclaw
+}
+
+export function sortAtoZ(arr){
+  var result = arr.sort((a, b) => (a.name > b.name ? 1 : -1));
+  return result
+}
+
+export function sortZtoA(arr){
+  var result3 = arr.sort((a, b) => (a.name > b.name ? -1 : 1));
+  return result3;
 }

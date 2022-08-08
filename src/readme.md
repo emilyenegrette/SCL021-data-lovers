@@ -59,7 +59,9 @@ Esta página web está diseñada para que los usuarios principiantes logren obte
 
 
 
- 
+Link a nuestra web:
+https://emilyenegrette.github.io/
+
 
 ---------- SCL021 Data Lovers - Devs 2022, Luisa Carrillo & Emily Negrette ----------
  

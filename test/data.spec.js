@@ -1,224 +1,356 @@
-export {harrySpecies, filterHouses, sortAtoZ} from '../data.js'
-//test estructura
-const dataHarryPotter = [
-        {
+import {sortAtoZ, sortZtoA, filterGryffindor, filterHufflepuff, filterRavenclaw, filterSlytherin, filterHuman, filterMagical} from '../src/data.js';
 
+
+//test estructura
+
+    const dataHarryPotter = [
+      {
+        "name": "George Weasley",
+        "species": "Human",
+        "gender": "Male",
+        "house": "Gryffindor",
+        "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      },
+      {
+        "name": "Dobby",
+        "species": "House-elf",
+        "gender": "Male",
+        "house": null,
+        "books_featured_in": [2, 3, 4, 5, 6, 7]
+      },
+      {
+        "name": "Cedric Diggory",
+        "species": "Human",
+        "gender": "Male",
+        "house": "Hufflepuff",
+        "books_featured_in": [3, 4, 5, 6, 7]
+      },
+      {
         "name": "Harry Potter",
         "species": "Human",
         "gender": "Male",
         "house": "Gryffindor",
-         "books_featured_in": [
-         1,
-         2,
-         3,
-         4,
-         5,
-         6,
-         7]    
+         "books_featured_in": [1, 2, 3, 4, 5, 6, 7]    
         },
-    {
-    
-        "name": "Euan Abercrombie",
-        "species": "Human",
-        "gender": "Male",
-        "house": "Gryffindor",
-        "books_featured_in": [5]
-      },
-      {
-
-        "name": "Stewart Ackerley",
-        "species": "Human",
-        "gender": "Male",
-        "house": "Ravenclaw",
-        "books_featured_in": [4]
-      },
-      {
-
-        "name": "African prince",
-        "species": "Human",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [1]
-      },
-      {
-
-        "name": "Agnes's son",
-        "species": "Human",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [5]
-      },
-      {
-
-        "name": "Cornelius Agrippa",
-        "species": "Human",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [1]
-      },
-      {
-    
-        "name": "Albino peacock",
-        "species": "Peacock",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [7]
-      },
-      {
-
-        "name": "Arkie Alderton",
-        "species": "Human",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [7]
-      },
-      
-      {
-
-        "name": "Angus",
-        "species": "Human",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [1]
-      },
-      {
-
-        "name": "Aragog",
-        "species": "Acromantula",
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [2, 5, 6, 7]
-      },
-      {
-    
-        "name": "Arcus",
-        "species": "Human",
-        "ancestry": null,
-        "gender": "Male",
-        "house": null,
-        "books_featured_in": [7]
-      },
-     {
-      "name": "Sirius Black",
-      "species": "Human",
-      "gender": "Male",
-      "house": "Gryffindor",
-      "books_featured_in": [1, 3, 4, 5, 6, 7]
-    },
-     {
-      
-      "name": "Cedric Diggory",
-      "species": "Human",
-      "gender": "Male",
-      "house": "Hufflepuff",
-      "books_featured_in": [3, 4, 5, 6, 7]
-    },
-    {
-
-      "name": "Ivor Dillonsby",
-      "species": "Human",
-      "gender": "Male",
-      "house": null,
-      "books_featured_in": [7]
-    },
-     {
-
-      "name": "Dobby",
-      "species": "House-elf",
-      "gender": "Male",
-      "house": null,
-      "books_featured_in": [2, 3, 4, 5, 6, 7]
-    },
-     {
-
-      "name": "Severus Snape",
-      "species": "Human",
-      "gender": "Male",
-      "house": "Slytherin",
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
-    },
-    {
-     
-      "name": "Fred Weasley",
-      "species": "Human",
-      "gender": "Male",
-      "house": "Gryffindor",
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
-    },
-    {
-    
-      "name": "George Weasley",
-      "species": "Human",
-      "gender": "Male",
-      "house": "Gryffindor",
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
-    },
-     
+        {
+          "name": "Luna Lovegood",
+          "species": "Human",
+          "gender": "Female",
+          "house": "Ravenclaw",
+          "books_featured_in": [4, 5, 6, 7]
+        },
+        {
+          "name": "Mafalda",
+          "species": "Human",
+          "gender": "Female",
+          "house": "Slytherin",
+          "books_featured_in": [4]
+        },
+        {
+          "name": "Sirius Black",
+          "species": "Human",
+          "gender": "Male",
+          "house": "Gryffindor",
+          "books_featured_in": [1, 3, 4, 5, 6, 7]
+        },
     ]
-        //test de sort
-    describe('sortAtoZ debería ser una función de ordenado de la A a la Z', () => {
-    it('Debería ser una función', () => {
-      expect(typeof sortAtoZ).toBe('function');
-    });
-  
-    it('Debería ordenar los personajes en orden alfabético ', () => {
-      let resultado = scrollTo (dataHarryPotter, sortAtoZ)
-      expect(resultado[0].name).toBe("Aberforth Dumbledore");
-      expect(resultado[1].name).toBe("Abraxas Malfoy");
-      expect(resultado[2].name).toBe("Adalbert Waffling");
-      expect(resultado[3].name).toBe("Adrian Pucey");
-      expect(resultado[4].name).toBe("African prince");
-      expect(resultado[5].name).toBe("Agatha Timms"); 
-  });
-  }); 
 
-    it("Debería ordenar los personajes en orden alfabético inverso", () => {
-      let resultado = sortAtoZ(dataHarryPotter, sortAtoZ);
-      expect(resultado[0].name).toBe("Zoo director");
-      expect(resultado[1].name).toBe("Zacharias Smith's father");
-      expect(resultado[2].name).toBe("Zacharias Smith");
-      expect(resultado[3].name).toBe("Z. Nettles");
-      expect(resultado[4].name).toBe("Yvonne");
-      expect(resultado[5].name).toBe("Xenophilius Lovegood");
-    });
-  
-  //test de species
-  describe(harrySpecies, () => {
-    it("Debería ser una función", () => {
-      expect(typeof harrySpecies).toBe("function");
-    });
-  
-    it("Debería retornar especie humana", () => {
-      let resultado = harrySpecies(dataHarryPotter, "Aberforth Dumbledore");
-      expect(resultado[0].species).toBe("Human");
-    });
-    it("Debería retornar especie mágica", () => {
-        let resultado = harrySpecies(dataHarryPotter, "Albino peacock");
-        expect(resultado[1].species).toBe("Peacock");
-      });
-  });
-  
+        //test de sort ordenado
 
+        const orderNames = [
+           
+            {
+              "name": "Cedric Diggory",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Hufflepuff",
+              "books_featured_in": [3, 4, 5, 6, 7]
+            },
+            {
+              "name": "Dobby",
+              "species": "House-elf",
+              "gender": "Male",
+              "house": null,
+              "books_featured_in": [2, 3, 4, 5, 6, 7]
+            },
+            {
+              "name": "George Weasley",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Gryffindor",
+              "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+            },
+            {
+              "name": "Harry Potter",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Gryffindor",
+               "books_featured_in": [1, 2, 3, 4, 5, 6, 7]    
+              },
+              {
+                "name": "Luna Lovegood",
+                "species": "Human",
+                "gender": "Female",
+                "house": "Ravenclaw",
+                "books_featured_in": [4, 5, 6, 7]
+              },
+              {
+                "name": "Mafalda",
+                "species": "Human",
+                "gender": "Female",
+                "house": "Slytherin",
+                "books_featured_in": [4]
+              },
+              {
+                "name": "Sirius Black",
+                "species": "Human",
+                "gender": "Male",
+                "house": "Gryffindor",
+                "books_featured_in": [1, 3, 4, 5, 6, 7]
+              },
+          ]
+    
+        //test de sort inverso
+
+        const reverseNames = [
+          {
+            "name": "Sirius Black",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+            "books_featured_in": [1, 3, 4, 5, 6, 7]
+          },
+          {
+            "name": "Mafalda",
+            "species": "Human",
+            "gender": "Female",
+            "house": "Slytherin",
+            "books_featured_in": [4]
+          },
+          {
+            "name": "Luna Lovegood",
+            "species": "Human",
+            "gender": "Female",
+            "house": "Ravenclaw",
+            "books_featured_in": [4, 5, 6, 7]
+          },
+          {
+            "name": "Harry Potter",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+             "books_featured_in": [1, 2, 3, 4, 5, 6, 7]    
+            },
+            {
+              "name": "George Weasley",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Gryffindor",
+              "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+            },
+            {
+              "name": "Dobby",
+              "species": "House-elf",
+              "gender": "Male",
+              "house": null,
+              "books_featured_in": [2, 3, 4, 5, 6, 7]
+            },
+            {
+              "name": "Cedric Diggory",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Hufflepuff",
+              "books_featured_in": [3, 4, 5, 6, 7]
+            },
+        ]
+
+        describe('sortZtoA', () => {
+          it('is a function', () => {
+            expect(typeof sortZtoA).toBe('function');
+          });
+          it('Debería retornar un array con todos los elementos ordenados de la z a la a.', () => {
+            expect(sortZtoA(dataHarryPotter, 'z-a')).toEqual(reverseNames);
+          });
+        });
+
+        describe('sortAtoZ', () => {
+          it('is a function', () => {
+            expect(typeof sortAtoZ).toBe('function');
+          });
+          it('Deberia retornar un array con todos los elementos ordenados de la a a la z.',() => {
+            expect(sortAtoZ(dataHarryPotter, 'a-z')).toEqual(orderNames);
+          }); 
+        });
+
+          //cont para hacer test species
+            const humanForTest = [
+          {
+            "name": "Cedric Diggory",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Hufflepuff",
+            "books_featured_in": [3, 4, 5, 6, 7]
+          },
+          {
+            "name": "George Weasley",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+            "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+          },
+          {
+            "name": "Harry Potter",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+             "books_featured_in": [1, 2, 3, 4, 5, 6, 7]    
+          },
+          {
+            "name": "Luna Lovegood",
+            "species": "Human",
+            "gender": "Female",
+            "house": "Ravenclaw",
+            "books_featured_in": [4, 5, 6, 7]
+          },
+          {
+            "name": "Mafalda",
+            "species": "Human",
+            "gender": "Female",
+            "house": "Slytherin",
+            "books_featured_in": [4]
+          },
+            {
+              "name": "Sirius Black",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Gryffindor",
+              "books_featured_in": [1, 3, 4, 5, 6, 7]
+            },
+          ]
+
+          //const para species
+
+          const speciesForTest = [
+            {
+              "name": "Dobby",
+              "species": "House-elf",
+              "gender": "Male",
+              "house": null,
+              "books_featured_in": [2, 3, 4, 5, 6, 7]
+            },
+          ]
+
+  //function species
+
+          describe('filterHuman', () => {
+          it('is a function', () => {
+            expect(typeof filterHuman).toBe('function');
+          });
+          it('Debería retornar un array con todos los personajes humanos', () => {
+            expect(filterHuman(dataHarryPotter, 'Human')).toEqual(humanForTest);
+          });
+        });
+
+        describe('filterMagical', () => {
+          it('is a function', () => {
+            expect(typeof filterMagical).toBe('function');
+          });
+          it('Deberia retornar un array con todos los personajes magicos',() => {
+            expect(filterMagical(dataHarryPotter, 'Magical')).toEqual(speciesForTest);
+          }); 
+        });
+  
+  //const para hacer test de houses
+
+        const gryffindorForTest = [
+          {
+            "name": "George Weasley",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+            "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+          },
+          {
+            "name": "Harry Potter",
+            "species": "Human",
+            "gender": "Male",
+            "house": "Gryffindor",
+             "books_featured_in": [1, 2, 3, 4, 5, 6, 7]    
+            },
+            {
+              "name": "Sirius Black",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Gryffindor",
+              "books_featured_in": [1, 3, 4, 5, 6, 7]
+            },
+        ]
+
+
+        const slytherinForTest = [
+            {
+              "name": "Mafalda",
+              "species": "Human",
+              "gender": "Female",
+              "house": "Slytherin",
+              "books_featured_in": [4]
+            },
+        ]
+
+        const hufflepuffForTest = [
+            {
+              "name": "Cedric Diggory",
+              "species": "Human",
+              "gender": "Male",
+              "house": "Hufflepuff",
+              "books_featured_in": [3, 4, 5, 6, 7]
+            },
+        ]
+
+        const ravenclawForTest = [
+          {
+            "name": "Luna Lovegood",
+            "species": "Human",
+            "gender": "Female",
+            "house": "Ravenclaw",
+            "books_featured_in": [4, 5, 6, 7]
+          },
+        ]
   //test de houses
-  describe(filterHouses, () => {
-    it("Debería ser una función", () => {
-      expect(typeof filterHouses).toBe("function");
+
+        describe('filterGryffindor', () => {
+        it('is a function', () => {
+        expect(typeof filterGryffindor).toBe('function');
+      });
+        it('Debería retornar un array con todos los personajes de Gryffindor', () => {
+        expect(filterGryffindor(dataHarryPotter, 'Gryffindor')).toEqual(gryffindorForTest);
+      });
     });
-  
-    it("Debería retornar sólo Gryffindor", () => {
-      let resultado = filterHouses(dataHarryPotter, "Albus Dumbledore");
-      expect(resultado[0].house).toBe("Gryffindor");
+
+        describe('filterSlytherin', () => {
+        it('is a function', () => {
+        expect(typeof filterSlytherin).toBe('function');
+      });
+      it('Debería retornar un array con todos los personajes de Slytherin',() => {
+      expect(filterSlytherin(dataHarryPotter, 'Slytherin')).toEqual(slytherinForTest);
+      }); 
     });
-    it("Debería retornar sólo Slytherin", () => {
-        let resultado = filterHouses(dataHarryPotter, "Abraxas Malfoy");
-        expect(resultado[0].house).toBe("Slytherin");
+
+        describe('filterHufflepuff', () => {
+        it('is a function', () => {
+        expect(typeof filterHufflepuff).toBe('function');
       });
-      it("Debería retornar sólo Hufflepuff", () => {
-        let resultado = filterHouses(dataHarryPotter, "Cadwallader");
-        expect(resultado[0].house).toBe("Hufflepuff");
+        it('Debería retornar un array con todos los personajes de Hufflepuff', () => {
+        expect(filterHufflepuff(dataHarryPotter, 'Hufflepuff')).toEqual(hufflepuffForTest);
       });
-      it("Debería retornar sólo Ravenclaw", () => {
-        let resultado = filterHouses(dataHarryPotter, "Anthony Goldstein");
-        expect(resultado[0].house).toBe("Ravenclaw");
+    });
+
+        describe('filterRavenclaw', () => {
+        it('is a function', () => {
+        expect(typeof filterRavenclaw).toBe('function');
       });
-  });
+      it('Debería retornar un array con todos los personajes de Ravenclaw',() => {
+      expect(filterRavenclaw(dataHarryPotter, 'Ravenclaw')).toEqual(ravenclawForTest);
+      }); 
+    });
+
