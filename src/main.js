@@ -1,7 +1,7 @@
 import data from './data/harrypotter/data.js';
 import {filterHuman, filterMagical, filterGryffindor, filterSlytherin, filterHufflepuff, filterRavenclaw, sortAtoZ, sortZtoA} from './data.js'
 
-function login(){
+function login() {
   alert(`Welcome to Wizardly!
   
 We are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary books and equipment.
@@ -134,7 +134,7 @@ document.getElementById("houses-select").addEventListener("change", () => {
 
  //funcion de filtrado alfabeticamente
 
-document.getElementById("orderAZ").addEventListener("change", () => {
+ document.getElementById("orderAZ").addEventListener("change", () => {
  const orderName = document.getElementById('orderAZ');
  const typeSelected = orderName.value;
   if(typeSelected === "a-z"){

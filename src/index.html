@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Data Lovers</title>
+  <script src="https://kit.fontawesome.com/965f8aee76.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +12,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="contenedor">
   <!-- HEADER -->
   <div class="container1">
     <header>
-      
+        <div class="toggle"><button class="nav-toggle"><i class="fa-solid fa-bars"></i></button></div>
+        <div class="back_menu"></div>
       <nav>
-        <ul>
-          <li><a href="characters.html">Characters</a></li>
-          <li><a href="#book">Books</a></li> 
-          <li><a href="#pelicula">Movies</a></li>
+        <ul class="nav-menu">
+          <li class="nav-menu-item"><a href="characters.html">Characters</a></li>
+          <li class="nav-menu-item"><a href="#book">Books</a></li> 
+          <li class="nav-menu-item"><a href="#pelicula">Movies</a></li>
         </ul>
       </nav>
 
@@ -30,9 +33,7 @@
     </div>
     <div class="nav2">
     <div class="button-container">
-        <ul>
           <li><input type="button" id="login" class="login" value="Login" /></li>
-          </ul>
     </div>
     </div>
     
@@ -264,5 +265,6 @@
   <script src="main.js"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"> </script>
    <!-- SCRIPT ENDS -->
+   </div>
 </body>
 </html>
