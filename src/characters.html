@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Data Lovers</title>
+  <script src="https://kit.fontawesome.com/965f8aee76.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +12,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="contenedor">
   <!-- HEADER -->
   <div class="container1">
     <header>
-    
+      <div class="toggle"><button class="nav-toggle"><i class="fa-solid fa-bars"></i></button></div>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a href="index.html">Characters</a></li>
          <li><a href="index.html">Books</a></li> 
           <li><a href="index.html">Movies</a></li>
@@ -108,8 +110,9 @@
 
    <!-- SCRIPT -->
   <script type="module" src="main.js"></script>
+  <script type="module" src="data.js"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"> </script>
    <!-- SCRIPT ENDS -->
-  
+  </div>
 </body>
 </html>

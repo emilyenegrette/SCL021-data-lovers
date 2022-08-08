@@ -1,7 +1,7 @@
 import data from './data/harrypotter/data.js';
 import {harrySpecies, filterHouses, sortAtoZ} from './data.js'
 
-function login(){
+function login() {
   alert(`Welcome to Wizardly!
   
 We are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary books and equipment.
@@ -44,3 +44,15 @@ document.getElementById("houses-select").addEventListener("change", filterHouses
 
  //funcion de filtrado alfabeticamente
 document.getElementById("orderAZ").addEventListener("change", sortAtoZ,false)
+
+
+document.getElementById("nav-toggle").addEventListener("click", mostrar_menu);
+
+nav_menu = document.getElementById("nav-menu");
+background_menu = document.getElementById("back_menu");
+
+function mostrar_menu() {
+
+  nav_menu.style.left = "0px";
+
+}
